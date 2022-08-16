@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>CTOY manager home page</title>
+    <style>
+        body {
+            background-size: 1700px 1800px;
+            background-repeat: repeat-y;
+            background-image: url("https://cdn.shopify.com/s/files/1/0358/0310/3363/files/SHOPIFY_SLIDER_MOBILE_SIZE_2_x800.png?v=1642486006")
+        }
+        table, th, td {
+        border: 1px solid black;
+        padding: 5px;
+        }
+        table {
+        border-spacing: 15px;
+        }
+         .w3-bar-block .w3-bar-item{
+            margin-top: 0px;
+        }
+        .w3-sidebar{
+            z-index: 0;
+            background-color: darkslategray;
+        }
+ 
+        .w3-border{
+            border-radius: 5px;
+        }
+        table, th, td {
+        border: 1px solid black;
+        padding: 5px;
+        }
+        table {
+        border-spacing: 15px;
+        }
+        table{
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000000;
+            text-align: center;
+            margin-left: 135px;
+            margin-top: -10px;
+        }
+        form{
+            margin-left: 0px;
+        }
+               .w3-teal{
+            border-radius: 10px;
+            text-align: center;
+            margin-top: -30px;
+            margin-left: -16px;
+        }
+        .pricingTable{
+            display: inline-table;
+            background-color: #ffffff;
+            text-align: center;
+            margin: 30px;
+            border-radius: 10px;
+            padding: 0px 10px 10px;
+            margin-left: 100px;
+            max-width: min-content;
+         }
+        .pricingName{
+            border-bottom: 2px solid #ebedec;
+            height: 100px;
+        }
+        .pricingPrice{
+            border-bottom: 2px solid #ebedec;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #71ce73;
+        }
+        .pricingInf{
+            border-bottom: 2px solid #ebedec;
+            height: 200px;
+        }
+
+        .animation{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count:infinite ;
+            margin-bottom: 150px;
+        }
+
+        @keyframes example {
+            0%   {left:0px; top:0px;}
+            25%  {left:145px; top:0px;}
+            50%  {left:145px; top:100px;}
+            75%  {left:0px; top:100px;}
+            100% {left:0px; top:0px;}
+        }
+        .sign {
+  position: absolute;
+  display: contents;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #6b1839,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 50%;
+  font-family: "Clip";
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+  28%,
+  33% {
+    color: #ff65bd;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2483;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+    </style>
+</head>
+<body>
+    <h3 style="padding:10px ; margin-top:0px;margin-left: 125px;text-align:center" class="w3-bar w3-green"></h3>
+        <div class="w3-sidebar w3-darkslategray w3-bar-block" style="width:15%; margin-top:-30px">
+            <br>
+            <h2 class="w3-bar-item w3-darkslategray" style="color: white;margin-top:-10px">Menu</h2>
+            <div class="w3-bar w3-border w3-grey">
+                <a href="/" class="w3-bar-item w3-button"><b>Home</b></a>
+            </div>
+            <div class="w3-bar w3-border w3-grey">
+                <a href="/addToy" class="w3-bar-item w3-button"><b>Add Toy</b></a>
+            </div>
+            <div class="w3-bar w3-border w3-grey">
+                <a href="/allToy" class="w3-bar-item w3-button"><b>All Toy</b></a>
+            </div>
+            
+        </div>
+<div style="margin-left:16%">
+    <div class="w3-container w3-teal">
+    <div class="sign">
+      <span class="fast-flicker">CTOY </span>manager <span class="flicker">home </span>page
+    </div>
+
+    <h1>!!!News Feed!!!</h1>
+     <form action="/searchHome" method="post">
+        <input style="width:20%"type="text" name="search" placeholder="Enter name of toys...">
+        <input style="border-radius: 10px;" type="submit" value="Search"> 
+     </form>
+     <br>
+     </div>
+     <br>
+        {{#each prods}}
+        <li class="pricingTable" style="height: 500px;">
+            <h1 style="border-bottom: 8px solid #ebedec;height:250px"><figure><img style="width:200px;" src="{{img}}"></figure></h1>
+            <h3 class="pricingName">{{name}}</h3>  
+            <div class="pricingInf">
+                <p style="font-weight: bold;color:red">Information</p>
+                <p>{{inf}}</p>
+            </div>
+            <h3 class="pricingPrice" >
+             {{price}}$  
+            </h3>
+         {{/each}}
+    
+</div>
+</body>
+<footer>
+        <p style="text-align: right; color:blue">Copyright &copy; 2022 GCH200582</p>
+</footer>
+</html>

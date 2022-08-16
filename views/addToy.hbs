@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Add Toy</title>
+    <style>
+        body {
+            background-size: 1700px 1800px;
+            background-repeat: repeat-y;
+            background-image: url("https://cdn.shopify.com/s/files/1/0358/0310/3363/files/SHOPIFY_SLIDER_MOBILE_SIZE_2_x800.png?v=1642486006")
+        }
+        .w3-teal{
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 0px;
+            margin-left: -16px;
+        }
+         .w3-bar-block .w3-bar-item{
+            margin-top: 0px;
+        }
+        .w3-sidebar{
+            z-index: 0;
+            background-color: darkslategray;
+        }
+    
+        .w3-border{
+            border-radius: 5px;
+        }
+              .sign {
+  position: absolute;
+  display: contents;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #6b1839,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 50%;
+  font-family: "Clip";
+  text-transform: uppercase;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+  28%,
+  33% {
+    color: #ff65bd;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2483;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+    </style>
+</head>
+<body>
+
+    <div class="w3-sidebar w3-darkslategray w3-bar-block" style="width:15%;">
+            <br>
+            <h2 class="w3-bar-item w3-darkslategray" style="color: white;margin-top:-10px">Menu</h2>
+            <div class="w3-bar w3-border w3-grey">
+                <a href="/" class="w3-bar-item w3-button"><b>Home</b></a>
+            </div>
+            <div class="w3-bar w3-border w3-grey">
+                <a href="/addToy" class="w3-bar-item w3-button"><b>Add Toy</b></a>
+            </div>
+            <div class="w3-bar w3-border w3-grey">
+                <a href="/allToy" class="w3-bar-item w3-button"><b>All Toy</b></a>
+            </div>
+        </div>
+        <div style="margin-left:16%">
+            <div class="w3-container w3-teal">
+            <h1>
+                 <div class="w3-container w3-teal"><div class="sign">
+                    <span class="fast-flicker">CTOY </span>manager <span class="flicker">home </span>page
+                </div>
+                <br>
+                Add Toy
+            </h1>                             
+                </div>
+                    <br>  
+                    <form action="/addToy" method="post" style="
+                        margin: 50px;
+                        padding: 20px;
+                        wi: max-content;
+                        /* height: 50%; */
+                        border-radius: 10px;
+                        background-color: lightgrey;">
+                        <div class="w3-container">
+                            <label><b>Name</b></label>
+                            <input type="text" name="name" class="w3-input w3-border">
+                        </div>
+                        <div class="w3-container">
+                            <br>
+                            <label><b>Brand</b></label>
+                                <select name="brand" class="w3-input w3-border">
+                                    <option>--None--</option>
+                                    <option>Barbie</option>
+                                    <option>Duplo</option>
+                                    <option>Hot Wheels</option>
+                                    <option>Sylvanian Families</option>
+                                    <option>Tomica</option>
+                                </select>     
+                        </div>
+                        <div class="w3-container">
+                            <br>
+                            <label><b>Toy image</b></label>
+                            <br>
+                            <input type="text" name="img" class="w3-input w3-border" placeholder="Enter URL here...">
+                        </div>
+                        <div class="w3-container">
+                            <br>
+                            <label><b>Information</b></label>
+                            <input type="text" name="inf" class="w3-input w3-border">
+                        </div>
+                        <div class="w3-container">
+                            <br>
+                            <label><b>Price</b></label>
+                            <input type="text" name="price" class="w3-input w3-border">
+                        </div>
+                        <br>
+                        <div class="w3-container">
+                            <input type="submit" value="Add" class="w3-button w3-teal"style="margin-left: 0px;">
+                    </div>
+                </div>
+</body>
+<footer>
+        <p style="text-align: right; color:blue;margin-top:225px">Copyright &copy; 2022 GCH200582</p>
+</footer>
+</html>
